@@ -1,0 +1,138 @@
+# ----- Level mp_6995 ------------------------
+# Designer: Wrp
+# Properties: Gramophone + Locks + Spread
+# Target Difficulty: Medium
+
+win=spread
+win=locks
+win=collect
+
+lose=moves 22
+
+# ----- Star/Points Targets ----------------
+
+star=1000
+star=5000
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyv
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+
+weights=20 20 20 20 20
+
+# ----- The Gameboard ----------------------
+
+row=.RRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=bRRRRRRRR
+row=RbbR.RRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRR.
+
+power=.........
+power=.........
+power=.........
+power=..S...S..
+power=.........
+power=.........
+power=.........
+power=.........
+power=....V....
+
+gramophone.row=.......1.
+gramophone.row=........1
+gramophone.row=.........
+gramophone.row=....1....
+gramophone.row=...1.1...
+gramophone.row=....1....
+gramophone.row=.........
+gramophone.row=1........
+gramophone.row=.1.......
+
+gramophone.endingFanfare=ragtime
+
+lock=....1....
+lock=..1...1..
+lock=.1.....1.
+lock=..1...1..
+lock=.........
+lock=..1...1..
+lock=.1.....1.
+lock=..1...1..
+lock=....1....
+
+boost=.........
+boost=...1.1...
+boost=.........
+boost=.........
+boost=..1...1..
+boost=.........
+boost=.........
+boost=...1.1...
+boost=.........
+
+spread=.....1111
+spread=........1
+spread=........1
+spread=........1
+spread=.........
+spread=1........
+spread=1........
+spread=1........
+spread=1111.....
+
+# ----- Collectable Items --------------------
+
+target.gramophone.className=gramophone
+target.gramophone.sprite=GramophoneHud
+target.gramophone.type=flyto
+target.gramophone.goal=40
+target.gramophone.flyToUI=CollectorMaster3
+
+# ----- Special Rules ----------------------
+
+rack_intro=type 2 duration 0.3 delay 0.01
+rack_outro=type 2 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+
+music=CheerUpCharlieMusic_2  GoldenTicketMusic NotCandyManMusic_2 NotCandyManMusic_1  CandyManMusic CandymanMusic_2 
+musicIsSequential=false   	 
+
+music_delay=0  
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off
