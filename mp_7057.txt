@@ -1,0 +1,187 @@
+# ----- Level mp_7057 ------------------------
+# Designer: Wrp
+# Properties: Mail + Ticket + Newspaper
+# Target Difficulty: Medium
+
+win=newspaper 20
+win=collect
+
+lose=moves 17
+
+# ----- Star/Points Targets ----------------
+
+star=1000
+star=5000
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvwmt
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+color.m=Mail|mail|true
+color.t=Ticket|ticket|true
+
+weights=16 16 16 16 16 20 0 0
+
+ticket_rules=100,3,2,8
+
+# ----- The Gameboard ----------------------
+
+row=RRR...RRR
+row=RRRR.RwRR
+row=RRRRRRwRR
+row=RwRRRwRwR
+row=wRRRRRRRR
+row=RwRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+
+mail=.........
+mail=.........
+mail=....2....
+mail=2...2...2
+mail=....2....
+mail=....2....
+mail=..22222..
+mail=..2...2..
+mail=..2...2..
+
+tickets=.........
+tickets=.........
+tickets=Tt.....Tt
+tickets=.........
+tickets=.........
+tickets=.........
+tickets=Tt.....Tt
+tickets=Tt.....Tt
+tickets=Tt.....Tt
+
+newspaper.row=33.....44
+newspaper.row=33.....44
+newspaper.row=.........
+newspaper.row=.........
+newspaper.row=..11.22..
+newspaper.row=..11.22..
+newspaper.row=.........
+newspaper.row=.........
+newspaper.row=.........
+
+newspaper.height1=5
+newspaper.height2=5
+newspaper.height3=5
+newspaper.height4=5
+
+boost=.........
+boost=.........
+boost=..1...1..
+boost=..1...1..
+boost=.1.....1.
+boost=.........
+boost=.........
+boost=.........
+boost=.........
+
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=.........
+SpellCistemAperio.chest=...111...
+SpellCistemAperio.chest=...111...
+
+dark=11.....11
+dark=11.....11
+dark=11.....11
+dark=1.......1
+dark=.........
+dark=.........
+dark=.........
+dark=.........
+dark=.........
+
+
+# ----- Collectable Items --------------------
+
+target.mail.className=mail
+target.mail.color=m
+target.mail.goal=34
+target.mail.min=5
+target.mail.max=5
+target.mail.percent=100
+target.mail.levelWeights=50 50
+target.mail.sprite=Mail
+target.mail.type=flyto
+target.mail.rotateOnFlyTo=false
+target.mail.flyToUI=CollectorMaster3
+target.mail.dropColumnFilter=111111111
+
+target.ticket.className=ticket
+target.ticket.color=t
+target.ticket.goal=8
+target.ticket.type=flyto
+target.ticket.rotateOnFlyTo=false
+target.ticket.flyToUI=CollectorMaster2
+target.ticket.dropColumnFilter=111111111
+
+
+# ----- Spell Rules ----------------------
+
+SpellLumos.enabled=true
+
+SpellCistemAperio.enabled=true
+SpellCistemAperio.benefit_color=m,10
+SpellCistemAperio.benefit_supers=Hsplitter,2
+SpellCistemAperio.benefit_supers=seeker,2
+
+target.spell.color=w
+target.spell.isWinCondition=false
+target.spell.type=flyto
+target.spell.flyToUI=FlyToSpellMeter
+target.spell.refillAmount=12
+
+# ----- Special Rules ----------------------
+
+#rack_intro=type 2 duration 0.3 delay 0.01
+rack_outro=type 2 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=
+
+music=CheerUpCharlieMusic_2  GoldenTicketMusic NotCandyManMusic_2 NotCandyManMusic_1  CandyManMusic CandymanMusic_2 musicIsSequential=false   	 
+
+music_delay=0 
+
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=5
+
+cpu_assistance=off

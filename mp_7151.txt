@@ -1,0 +1,128 @@
+# ----- Level mp_7151 ------------------------
+# Designer: Wrp
+# Properties: Jelly Slugs + Dragon Egg + Flag
+# Difficulty Target: Easy
+
+
+win=BigEgg 2
+win=jellyslugs 8
+win=collect
+
+lose=moves 24
+
+# ----- Star/Points Targets ----------------
+
+star=1000
+star=5000	
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvf
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.f=Flag|flag|true
+
+weights=20 20 20 20 20 0
+flag_rules=100,4,1,10
+
+# ----- The Gameboard ----------------------
+
+row=.RRRRRRR.
+row=.RRRRRRR.
+row=RRRRRvvRv
+row=RRvRRRRvR
+row=RvRRRRRRR
+row=RvRRRRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=RRRR.RRRR
+
+jellySlugs=.........
+jellySlugs=....^....
+jellySlugs=....2....
+jellySlugs=...v2v...
+jellySlugs=..22v22..
+jellySlugs=..>222<..
+jellySlugs=...22^...
+jellySlugs=....^....
+jellySlugs=.........
+
+flags=.3.....5.
+flags=.3.....5.
+flags=.........
+flags=4.......6
+flags=4.......6
+flags=.........
+flags=.........
+flags=...1.2...
+flags=...1.2...
+
+boost=.........
+boost=.........
+boost=.1.1.1.1.
+boost=..1...1..
+boost=.........
+boost=.........
+boost=.........
+boost=.........
+boost=.........
+
+bigEgg.1.pos=1,1
+bigEgg.1.level=3
+
+bigEgg.2.pos=6,1
+bigEgg.2.level=3
+
+# ----- Collectable Items --------------------
+
+target.flag.className=flag
+target.flag.sprite=Flag_HUD
+target.flag.color=f
+target.flag.goal=10
+target.flag.type=flyto
+target.flag.rotateOnFlyTo=false
+target.flag.flyToUI=CollectorMaster3
+target.flag.dropColumnFilter=111111111
+
+# ----- Special Rules ----------------------
+
+rack_intro=type 1 duration 1.00 delay .1
+rack_outro=type 2 duration 1.00 delay 0.25
+
+bg_color=255 255 255 255
+bg_style=alt17
+
+music=CheerUpCharlieMusic_2  GoldenTicketMusic NotCandyManMusic_2 NotCandyManMusic_1  CandyManMusic CandymanMusic_2 musicIsSequential=false   	 
+
+music_delay=0 
+
+two_by_two_splitter=true
+square_match=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_super_plump
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=4
+
+cpu_assistance=off
+
