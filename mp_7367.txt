@@ -1,0 +1,190 @@
+# ----- Level mp_7367 ---------------------------
+# Designed By: Wrp
+# Goals: Mirror, Mining, Firebolt
+# Spells Used: Colovaria, Refill
+# Target Difficulty: Medium
+
+win=mirror 2
+win=mining
+win=firebolt 6
+win=collect
+
+lose=moves 22
+
+# ----- Star/Points Targets ----------------
+
+star=1000
+star=5000	
+star=115000
+
+# ----- Gameboard Items --------------------
+
+new=rbgyvw
+
+color.r=Red
+color.b=Blue
+color.g=Green
+color.y=Yellow
+color.v=Violet
+color.w=White
+
+weights=16 16 16 16 16 20
+
+
+# ----- The Gameboard ----------------------
+
+row=RRRRwwRRR
+row=RRRwwRRRR
+row=RRRRRRRRR
+row=RRRRRRRRR
+row=..RRRRRRR
+row=.RRRRRRRR
+row=RRRRwRRRR
+row=RRRRRwRRR
+row=RRRRwRRRR
+
+mirror.1.coord=3,8
+mirror.1.color=r
+mirror.1.count=30
+
+mirror.2.coord=8,8
+mirror.2.color=b
+mirror.2.count=30
+
+
+mining=......55.
+mining=......5..
+mining=.....55..
+mining=....55555
+mining=...555555
+mining=....55555
+mining=.....55..
+mining=......5..
+mining=......55.
+
+mining_color=......12.
+mining_color=......1..
+mining_color=.....13..
+mining_color=....13331
+mining_color=...112233
+mining_color=....13331
+mining_color=.....13..
+mining_color=......1..
+mining_color=......12.
+
+
+firebolt=>3>......
+firebolt=>3>......
+firebolt=>3>......
+firebolt=.........
+firebolt=.........
+firebolt=.........
+firebolt=>3>......
+firebolt=>3>......
+firebolt=>3>......
+
+
+SpellColovaria.inkPots=........1
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=.........
+SpellColovaria.inkPots=........2
+
+SpellColovaria.inkColor=........r
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=.........
+SpellColovaria.inkColor=........b
+
+boost=....1....
+boost=.....1...
+boost=....1....
+boost=..1......
+boost=.........
+boost=..1......
+boost=....1....
+boost=.....1...
+boost=....1....
+
+#Supers on the board:
+power=.........
+power=.......sv
+power=.......hs
+power=.........
+power=.........
+power=.........
+power=.......hs
+power=.......sv
+power=.........
+
+# ----- Collectable Items --------------------
+
+target.mining.className=mineReward
+target.mining.sprite=MiningHud
+target.mining.type=flyto
+target.mining.flyToUI=CollectorMaster3
+
+
+# ------- Spell Rules ------------
+
+target.spell.color=w
+target.spell.isWinCondition=false
+target.spell.type=flyto
+target.spell.flyToUI=FlyToSpellMeter
+target.spell.refillAmount=8
+
+SpellColovaria.enabled=true
+SpellColovaria.numTargets=10
+
+SpellRefillingCharm.enabled=true
+SpellRefillingCharm.addMoves=3
+
+
+# ------- Special Rules ------------
+
+
+rack_intro=type 1 duration 0.3 delay 0.01
+rack_outro=type 1 duration 0.3 delay 0.01
+
+bg_color=255 255 255 255
+bg_style=alt17
+
+
+music=CheerUpCharlieMusic_2  GoldenTicketMusic NotCandyManMusic_2 NotCandyManMusic_1  CandyManMusic CandymanMusic_2 
+musicIsSequential=false   	 
+
+music_delay=0 
+
+
+square_match=true
+two_by_two_splitter=true
+
+bonus=6 deleter
+bonus=11 deleter
+bonus=15 deleter
+bonus=19 deleter
+
+# ----- Power Ups --------------------------
+
+preLevelPowerup=powerup_one_splitter
+preLevelPowerup=powerup_1bubble
+preLevelPowerup=powerup_1seeker
+
+inLevelPowerup=powerup_shovel
+inLevelPowerup=powerup_basket
+inLevelPowerup=powerup_rowclear
+inLevelPowerup=powerup_columnclear
+
+# ----- Secondary Cascade Commands ---------
+
+explosiveness=4
+
+cpu_assistance=off
