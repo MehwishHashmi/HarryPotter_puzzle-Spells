@@ -1,6 +1,7 @@
 # ----- Level mp_7057 ------------------------
 # Designer: Wrp
 # Properties: Mail + Ticket + Newspaper
+# Spells Used: Cistem Aperio, Lumos
 # Target Difficulty: Medium
 
 win=newspaper 20
